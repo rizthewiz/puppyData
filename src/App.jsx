@@ -21,14 +21,19 @@ export default function App() {
           {puppy.name}
         </p>
       ))}
-      {/* {const featuredPup = puppies.find((pup) => pup.id === featPupId)} */}
-      {featPupId && (
+      {
+        (featuredPup = featPupId
+          ? puppies.find((pup) => pup.id === featPupId)
+          : null)
+      }
+
+      {featuredPup && (
         <div>
           <h2>{feturedPup.name}</h2>
           <ul>
             <li>Age: {featuredPup.age}</li>
             <li>Email: {featuredPup.email}</li>
-          </ul>{" "}
+          </ul>
         </div>
       )}
     </div>
