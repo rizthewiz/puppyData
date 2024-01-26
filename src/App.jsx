@@ -4,12 +4,12 @@ import { puppyList } from "./data.js";
 export default function App() {
   const [puppies, setPuppies] = useState(puppyList);
   const [featPupId, setFeatPupId] = useState(null);
-  const [featuredPup, setFeaturedPup] = useState(null);
 
   function handleClick(id) {
     setFeatPupId(id);
-    setFeaturedPup(puppies.find((pup) => pup.id === id));
   }
+
+  const featuredPup = puppies.find((pup) => pup.id === featPupId);
 
   return (
     <div>
