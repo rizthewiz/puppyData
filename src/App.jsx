@@ -1,5 +1,6 @@
 import { cloneElement, useState } from "react";
 import { puppyList } from "./data.js";
+import "./App.css";
 
 export default function App() {
   const [puppies, setPuppies] = useState(puppyList);
